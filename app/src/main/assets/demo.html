@@ -1,0 +1,66 @@
+<html>
+<head>
+    <meta content="text/html; charset=utf-8" http-equiv="content-type">
+    <title>
+        js调用java
+    </title>
+</head>
+
+<body>
+<p>
+    <xmp id="show">
+    </xmp>
+</p>
+<p>
+    <xmp id="init">
+    </xmp>
+</p>
+<p>
+    <input type="button" id="prompt" value="windowPrompt" onclick="callPrompt();"
+    />
+</p>
+<p>
+    <input type="button" id="alert" value="windowAlert" onclick="callAlert();"
+    />
+</p>
+<p>
+    <input type="button" id="confirm" value="windowConfirm" onclick="callConfirm();"
+    />
+</p>
+<p>
+    <input type="button" id="interface" value="interface Toast" onclick="interfaceToast();"
+    />
+</p>
+<p>
+    <input type="button" id="enter2" value="显示html" onclick="testDiv();"/>
+</p>
+<p>
+    <input type="file" value="打开文件"/>
+</p>
+</body>
+<script>
+        function callPrompt(){
+            window.prompt('call prompt',100)
+        }
+
+        function callAlert(){
+            window.alert('call alert')
+        }
+
+        function callConfirm(){
+            window.confirm('call prompt')
+        }
+
+        function callInterface(){
+            console.log('callInterface')
+            javascript:IJavascriptInterface.send('callInterface')
+        }
+
+        function interfaceToast(){
+
+            javascript:AlertInterface.showToast('interfaceToast')
+        }
+</script>
+
+</html>
+
